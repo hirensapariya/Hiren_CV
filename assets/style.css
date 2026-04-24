@@ -325,6 +325,7 @@ body {
   font-size: 13.5px;
   line-height: 1.65;
   padding: 24px 0;
+  overflow-x: auto;
 }
 .line-numbers {
   width: 52px;
@@ -341,12 +342,12 @@ body {
   flex: 1;
   padding-left: 20px;
   padding-right: 32px;
+  min-width: max-content;
 }
 .line {
   display: block;
-  height: 1.65em;
-  white-space: pre-wrap;
-  word-break: break-word;
+  min-height: 1.65em;
+  white-space: pre;
 }
 .line:hover { background: var(--line-highlight); border-radius: 3px; }
 
@@ -688,10 +689,22 @@ a.hero-badge:hover {
   .tab { padding: 0 10px; }
   .section-wrapper { padding: 20px 16px; }
   .code-block { font-size: 12px; }
+
+  .status-bar {
+    height: auto;
+    min-height: 22px;
+    flex-wrap: wrap;
+    padding: 6px 12px;
+    gap: 6px 16px;
+  }
+  .status-item:last-child { margin-left: 0; }
 }
 @media (max-width: 480px) {
   .title-bar-title { display: none; }
   .hero-meta { flex-direction: column; gap: 8px; }
+  
+  /* Hide non-essential status items on small mobile */
+  .status-bar .status-item:nth-child(n+4) { display: none; }
 }
 
 /* =============================================
