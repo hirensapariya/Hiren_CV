@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hiren Sapariya — Full Stack Developer</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Fira+Code:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+
+<body>
+
+  <!-- Floating background glow -->
+  <div class="bg-glow"></div>
+
+  <!-- ======= IDE SHELL ======= -->
+  <div class="ide-shell">
+
+    <!-- TITLE BAR -->
+    <div class="title-bar">
+      <div class="title-bar-dots">
+        <div class="dot dot-red"></div>
+        <div class="dot dot-yellow"></div>
+        <div class="dot dot-green"></div>
+      </div>
+      <div class="title-bar-title">hiren-sapariya.dev — VS Code</div>
+      <div class="theme-toggle" id="themeToggle" title="Toggle dark/light mode">
+        <span class="toggle-label" id="themeLabel">🌙</span>
+        <div class="toggle-track">
+          <div class="toggle-thumb"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB BAR -->
+    <div class="tab-bar" id="tabBar">
+      <div class="tab active" data-target="hero"> <span class="tab-icon">🏠</span> home.js</div>
+      <div class="tab" data-target="about"> <span class="tab-icon">📄</span> about.md</div>
+      <div class="tab" data-target="skills"> <span class="tab-icon">⚡</span> skills.json</div>
+      <div class="tab" data-target="experience"> <span class="tab-icon">💼</span> experience.ts</div>
+      <div class="tab" data-target="projects"> <span class="tab-icon">🚀</span> projects.js</div>
+      <div class="tab" data-target="education"> <span class="tab-icon">🎓</span> education.yml</div>
+      <div class="tab" data-target="contact"> <span class="tab-icon">📬</span> contact.json</div>
+    </div>
+
+    <!-- BODY -->
+    <div class="ide-body">
+
+      <!-- ACTIVITY BAR -->
+      <div class="activity-bar">
+        <div class="activity-icon active" title="Explorer">📁</div>
+        <div class="activity-icon" title="Search">🔍</div>
+        <div class="activity-icon" title="Source Control">🔀</div>
+        <div class="activity-icon" title="Extensions">🧩</div>
+        <div class="activity-icon" title="Debug">🐛</div>
+        <div class="activity-icon" style="margin-top:auto" title="Settings">⚙️</div>
+      </div>
+
+      <!-- SIDEBAR -->
+      <div class="sidebar">
+        <div class="sidebar-header">Explorer</div>
+        <div class="sidebar-section">📂 hiren-sapariya</div>
+        <div class="sidebar-item active" data-target="hero"> <span class="file-icon">📄</span> home.js</div>
+        <div class="sidebar-item" data-target="about"> <span class="file-icon">📝</span> about.md</div>
+        <div class="sidebar-item" data-target="skills"> <span class="file-icon">⚡</span> skills.json</div>
+        <div class="sidebar-item" data-target="experience"> <span class="file-icon">💼</span> experience.ts</div>
+        <div class="sidebar-item" data-target="projects"> <span class="file-icon">🚀</span> projects.js</div>
+        <div class="sidebar-item" data-target="education"> <span class="file-icon">🎓</span> education.yml</div>
+        <div class="sidebar-item" data-target="contact"> <span class="file-icon">📬</span> contact.json</div>
+        <div class="sidebar-section" style="margin-top:24px;">📂 node_modules</div>
+        <div class="sidebar-item"><span class="file-icon">📦</span> laravel</div>
+        <div class="sidebar-item"><span class="file-icon">📦</span> react</div>
+        <div class="sidebar-item"><span class="file-icon">📦</span> node.js</div>
+        <div class="sidebar-item"><span class="file-icon">📦</span> python</div>
+        <div class="sidebar-section" style="margin-top:12px;">📄 README.md</div>
+        <div class="sidebar-item"><span class="file-icon">🔧</span> .gitconfig</div>
+        <div class="sidebar-item"><span class="file-icon">🐳</span> docker-compose.yml</div>
+      </div>
+
+      <!-- EDITOR AREA -->
+      <div class="editor-area" id="editorArea">
+
+        <!-- ===== HERO / HOME ===== -->
+        <div class="editor-content active" id="content-hero">
+          <div class="hero-section">
+            <div class="cmt" style="font-size:12px;margin-bottom:16px;">/**
+              * @author Hiren Sapariya
+              * @role Full Stack Developer &amp; Department Head
+              * @version 5.0.0
+              * @license MIT
+              */</div>
+            <div class="typing-name" id="typingName"></div><span class="typing-cursor" id="typingCursor"
+              style="display:none;"></span>
+            <div class="typing-title" id="typingTitle" style="opacity:0;"></div>
+            <div class="hero-meta" id="heroMeta" style="opacity:0;transition:opacity 0.6s ease;">
+              <span class="hero-badge">📍 Adajan, Surat, Gujarat</span>
+              <a class="hero-badge" href="tel:+918758118665">📞 +91 8758118665</a>
+              <a class="hero-badge" href="mailto:hirusapariya@gmail.com">✉️ hirusapariya@gmail.com</a>
+              <a class="hero-badge" href="https://www.linkedin.com/in/hiren-sapariya-16b41616a/" target="_blank"
+                rel="noopener">🔗 LinkedIn</a>
+              <span class="hero-badge">⏱️ 5+ Years Experience</span>
+            </div>
+          </div>
+
+          <div class="code-block">
+            <div class="line-numbers" id="heroLineNums"></div>
+            <div class="code-lines" id="heroLines"></div>
+          </div>
+        </div>
+
+        <!-- ===== ABOUT ===== -->
+        <div class="editor-content" id="content-about">
+          <div class="section-wrapper">
+            <div class="section-comment">// about.md — Personal Summary</div>
+            <div class="section-declaration"><span class="kw">export default</span> <span class="fn">AboutMe</span><span
+                class="brk">()</span> <span class="op">=&gt;</span> <span class="brk">{</span></div>
+
+            <div class="code-block pt-0">
+              <div class="line-numbers">
+                <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span>
+                <span>6</span><span>7</span><span>8</span><span>9</span><span>10</span>
+                <span>11</span><span>12</span><span>13</span>
+              </div>
+              <div class="code-lines">
+                <span class="line"><span class="cmt">/**</span></span>
+                <span class="line"><span class="cmt"> * Full Stack Developer &amp; Department Head</span></span>
+                <span class="line"><span class="cmt"> * with 5+ years of proven enterprise experience.</span></span>
+                <span class="line"><span class="cmt"> */</span></span>
+                <span class="line"></span>
+                <span class="line"><span class="kw">const</span> <span class="prop">profile</span> <span
+                    class="op">=</span> <span class="brk">{</span></span>
+                <span class="line"> <span class="prop">name</span><span class="punc">:</span> <span class="str">"Hiren
+                    Sapariya"</span><span class="punc">,</span></span>
+                <span class="line"> <span class="prop">title</span><span class="punc">:</span> <span class="str">"Full
+                    Stack Developer &amp; Dept Head"</span><span class="punc">,</span></span>
+                <span class="line"> <span class="prop">experience</span><span class="punc">:</span> <span
+                    class="str">"5+ years"</span><span class="punc">,</span></span>
+                <span class="line"> <span class="prop">domains</span><span class="punc">:</span> <span
+                    class="brk">[</span><span class="str">"Fintech"</span><span class="punc">,</span> <span
+                    class="str">"ERP"</span><span class="punc">,</span> <span class="str">"Automation"</span><span
+                    class="brk">]</span><span class="punc">,</span></span>
+                <span class="line"> <span class="prop">teamSize</span><span class="punc">:</span> <span
+                    class="num">5</span><span class="punc">,</span></span>
+                <span class="line"> <span class="prop">aiDriven</span><span class="punc">:</span> <span
+                    class="kw">true</span></span>
+                <span class="line"><span class="brk">}</span><span class="punc">;</span></span>
+              </div>
+            </div>
+
+            <div class="info-card reveal">
+              Full Stack Developer &amp; Department Head with <span class="accent-blue fw-600">5+ years</span> of
+              experience in designing and delivering scalable enterprise applications across <span
+                class="accent-orange">fintech, ERP, and automation</span> domains.<br><br>
+              Expert in <span style="color:var(--accent-purple);">PHP (Laravel, CodeIgniter)</span>, <span
+                style="color:var(--accent-cyan);">React.js, Node.js, and Python</span>, with strong capabilities in
+              system architecture, API integrations (REST &amp; SOAP), and database design.<br><br>
+              Proven track record of building enterprise-grade systems including ERP, eKYC platforms, CRM systems, and
+              real-time trading applications. Strong problem-solving mindset with an <span
+                style="color:var(--accent-green);">AI-driven development approach</span>, enabling faster delivery and
+              optimized system performance.
+            </div>
+
+            <div class="section-divider">
+              <div class="section-comment" style="margin-bottom:14px;">// Core Strengths</div>
+              <div class="projects-grid" style="grid-template-columns:repeat(auto-fill,minmax(220px,1fr));">
+                <div class="project-card reveal">
+                  <div class="project-title">🤖 AI-Driven Workflow</div>
+                  <div class="project-desc">Uses modern AI tools for accelerated, optimized delivery cycles.</div>
+                </div>
+                <div class="project-card reveal">
+                  <div class="project-title">👥 Team Leadership</div>
+                  <div class="project-desc">Mentoring developers, cross-team coordination, and task management.</div>
+                </div>
+                <div class="project-card reveal">
+                  <div class="project-title">🏗️ System Architecture</div>
+                  <div class="project-desc">End-to-end ownership: requirement capture → design → deploy.</div>
+                </div>
+                <div class="project-card reveal">
+                  <div class="project-title">📈 Fintech Expertise</div>
+                  <div class="project-desc">Trading, KYC, backoffice, compliance — deep domain knowledge.</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ===== SKILLS ===== -->
+        <div class="editor-content" id="content-skills">
+          <div class="section-wrapper">
+            <div class="section-comment">// skills.json — Technical Proficiencies</div>
+            <div class="section-declaration"><span class="kw">const</span> <span class="prop">skills</span> <span
+                class="op">=</span> <span class="brk">{</span></div>
+
+            <div class="mt-8">
+
+              <div class="skill-group reveal">
+                <div class="skill-group-title"><span class="str">"languages &amp; frameworks"</span></div>
+                <div class="skill-item">
+                  <div class="skill-header"><span class="skill-name"><span class="kw">PHP</span> (Laravel, CodeIgniter,
+                      WordPress)</span><span class="skill-pct num">95%</span></div>
+                  <div class="skill-bar-bg">
+                    <div class="skill-bar-fill bar-blue" data-width="95"></div>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-header"><span class="skill-name"><span class="kw">JavaScript</span> / jQuery /
+                      AJAX</span><span class="skill-pct num">90%</span></div>
+                  <div class="skill-bar-bg">
+                    <div class="skill-bar-fill bar-blue" data-width="90"></div>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-header"><span class="skill-name"><span class="kw">React.js</span></span><span
+                      class="skill-pct num">85%</span></div>
+                  <div class="skill-bar-bg">
+                    <div class="skill-bar-fill bar-blue" data-width="85"></div>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-header"><span class="skill-name"><span class="kw">Node.js</span>
+                      (Express)</span><span class="skill-pct num">80%</span></div>
+                  <div class="skill-bar-bg">
+                    <div class="skill-bar-fill bar-blue" data-width="80"></div>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-header"><span class="skill-name"><span class="kw">Python</span> (Django,
+                      FastAPI)</span><span class="skill-pct num">75%</span></div>
+                  <div class="skill-bar-bg">
+                    <div class="skill-bar-fill bar-blue" data-width="75"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="skill-group reveal">
+                <div class="skill-group-title"><span class="str">"frontend"</span></div>
+                <div class="skill-item">
+                  <div class="skill-header"><span class="skill-name">HTML5 / CSS3 / SCSS</span><span
+                      class="skill-pct num">92%</span></div>
+                  <div class="skill-bar-bg">
+                    <div class="skill-bar-fill bar-green" data-width="92"></div>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-header"><span class="skill-name">Bootstrap / Tailwind CSS</span><span
+                      class="skill-pct num">88%</span></div>
+                  <div class="skill-bar-bg">
+                    <div class="skill-bar-fill bar-green" data-width="88"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="skill-group reveal">
+                <div class="skill-group-title"><span class="str">"backend &amp; architecture"</span></div>
+                <div class="skill-item">
+                  <div class="skill-header"><span class="skill-name">REST APIs / SOAP / Microservices</span><span
+                      class="skill-pct num">93%</span></div>
+                  <div class="skill-bar-bg">
+                    <div class="skill-bar-fill bar-orange" data-width="93"></div>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-header"><span class="skill-name">WebSockets / Real-time Systems</span><span
+                      class="skill-pct num">85%</span></div>
+                  <div class="skill-bar-bg">
+                    <div class="skill-bar-fill bar-orange" data-width="85"></div>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-header"><span class="skill-name">Cron Jobs / SFTP / Web Scraping</span><span
+                      class="skill-pct num">80%</span></div>
+                  <div class="skill-bar-bg">
+                    <div class="skill-bar-fill bar-orange" data-width="80"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="skill-group reveal">
+                <div class="skill-group-title"><span class="str">"databases"</span></div>
+                <div class="skill-item">
+                  <div class="skill-header"><span class="skill-name">MySQL</span><span class="skill-pct num">92%</span>
+                  </div>
+                  <div class="skill-bar-bg">
+                    <div class="skill-bar-fill bar-purple" data-width="92"></div>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-header"><span class="skill-name">Microsoft SQL Server (MSSQL)</span><span
+                      class="skill-pct num">85%</span></div>
+                  <div class="skill-bar-bg">
+                    <div class="skill-bar-fill bar-purple" data-width="85"></div>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <div class="skill-header"><span class="skill-name">MongoDB</span><span
+                      class="skill-pct num">75%</span></div>
+                  <div class="skill-bar-bg">
+                    <div class="skill-bar-fill bar-purple" data-width="75"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="skill-group reveal">
+                <div class="skill-group-title"><span class="str">"tools &amp; platforms"</span></div>
+                <div style="display:flex;flex-wrap:wrap;gap:8px;">
+                  <span class="project-tag" style="border-color:var(--accent-blue);color:var(--accent-blue);">🐙
+                    GitHub</span>
+                  <span class="project-tag" style="border-color:var(--accent-cyan);color:var(--accent-cyan);">🐳
+                    Docker</span>
+                  <span class="project-tag" style="border-color:var(--accent-green);color:var(--accent-green);">⚡
+                    n8n</span>
+                  <span class="project-tag" style="border-color:var(--accent-orange);color:var(--accent-orange);">📘
+                    Swagger</span>
+                  <span class="project-tag" style="border-color:var(--accent-purple);color:var(--accent-purple);">🤖
+                    Cursor AI</span>
+                  <span class="project-tag" style="border-color:var(--accent-yellow);color:var(--accent-yellow);">🌊
+                    Claude</span>
+                  <span class="project-tag">🎨 Canva</span>
+                  <span class="project-tag">🖼️ Photoshop</span>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="section-declaration" style="margin-top:8px;"><span class="brk">}</span><span
+                class="punc">;</span></div>
+          </div>
+        </div>
+
+        <!-- ===== EXPERIENCE ===== -->
+        <div class="editor-content" id="content-experience">
+          <div class="section-wrapper">
+            <div class="section-comment">// experience.ts — Work History</div>
+            <div class="section-declaration"><span class="kw">function</span> <span class="fn">experience</span><span
+                class="brk">()</span> <span class="brk">{</span></div>
+
+            <div class="exp-card reveal">
+              <div class="exp-header">
+                <div>
+                  <div class="exp-company">🏢 Arham Wealth Management</div>
+                  <div class="exp-role">// Department Head &amp; Full Stack Developer</div>
+                </div>
+                <div class="exp-period">Dec 2023 – Present</div>
+              </div>
+              <ul class="exp-list">
+                <li>Leading a team of 5+ developers while delivering scalable enterprise applications</li>
+                <li>Designed and developed a company-wide ERP system covering Accounting, HR, RMS, Compliance,
+                  Inventory, and KYC operations</li>
+                <li>Built complete eKYC &amp; Re-KYC platform with Client and Admin Panels</li>
+                <li>Developed systems including CRM, Helpdesk, Backoffice, and KYC Surveillance</li>
+                <li>Built real-time trading applications using WebSocket for live data processing</li>
+                <li>Collaborated with vendors for API integrations (eKYC, payment, verification)</li>
+                <li>Worked extensively with REST &amp; SOAP APIs, ensuring secure and optimized data exchange</li>
+                <li>Designed and implemented internal APIs and microservices architecture</li>
+                <li>Optimized system performance and handled high-volume transactions</li>
+                <li>Managed full lifecycle: requirement gathering → system design → development → deployment</li>
+              </ul>
+            </div>
+
+            <div class="exp-card reveal">
+              <div class="exp-header">
+                <div>
+                  <div class="exp-company">📊 Arham Share Pvt Ltd</div>
+                  <div class="exp-role">// Team Leader | Full Stack Developer</div>
+                </div>
+                <div class="exp-period">Jun 2020 – Nov 2023</div>
+              </div>
+              <ul class="exp-list">
+                <li>Progressed from Junior Developer to Team Leader role</li>
+                <li>Developed and maintained eKYC systems, backoffice platforms, and risk management systems</li>
+                <li>Built full stack applications using PHP, Laravel, CodeIgniter, JavaScript, jQuery</li>
+                <li>Integrated APIs including Payment Gateway, Penny Drop, eDIS, IPO, NSDL</li>
+                <li>Developed automation scripts, cron jobs, and real-time features using WebSocket</li>
+                <li>Managed hosting on Windows Server and Linux (cPanel)</li>
+                <li>Led team coordination, task allocation, and delivery management</li>
+              </ul>
+            </div>
+
+            <div class="exp-card reveal">
+              <div class="exp-header">
+                <div>
+                  <div class="exp-company">💊 99Plugins Pvt Ltd</div>
+                  <div class="exp-role">// PHP Developer Intern</div>
+                </div>
+                <div class="exp-period">Jan 2020 – May 2020</div>
+              </div>
+              <ul class="exp-list">
+                <li>Developed a medical e-commerce platform with integrated online doctor consultation system</li>
+                <li>Implemented features including product management, appointment scheduling, and user interaction</li>
+                <li>Worked on backend development using Core PHP and database integration</li>
+              </ul>
+            </div>
+
+            <div class="section-declaration mt-8"><span class="brk">}</span></div>
+          </div>
+        </div>
+
+        <!-- ===== PROJECTS ===== -->
+        <div class="editor-content" id="content-projects">
+          <div class="section-wrapper">
+            <div class="section-comment">// projects.js — Key Projects Shipped</div>
+            <div class="section-declaration"><span class="kw">const</span> <span class="prop">projects</span> <span
+                class="op">=</span> <span class="brk">[</span></div>
+
+            <div class="projects-grid">
+              <div class="project-card reveal" data-images="portfolio_images/ERP Software 01.png">
+                <img src="portfolio_images/ERP Software 01.png" class="project-image" alt="ERP Platform">
+                <div class="project-content">
+                  <div class="project-title">🏭 ERP Platform</div>
+                  <div class="project-desc">Full-scale ERP covering Accounting, HR, Risk Management, Compliance &amp;
+                    Audit, KYC Operations, Inventory, Helpdesk. Multi-department, high-volume operations.</div>
+                  <div class="project-tags">
+                    <span class="project-tag">Laravel</span><span class="project-tag">PHP</span><span
+                      class="project-tag">MySQL</span><span class="project-tag">React</span>
+                  </div>
+                </div>
+              </div>
+              <div class="project-card reveal" data-images="portfolio_images/eKYC - 01.png,portfolio_images/eKYC - 02.png,portfolio_images/eKYC - 03.png">
+                <img src="portfolio_images/eKYC - 01.png" class="project-image" alt="eKYC System">
+                <div class="project-content">
+                  <div class="project-title">🆔 eKYC &amp; Re-KYC System</div>
+                  <div class="project-desc">End-to-end digital onboarding platform with Client and Admin Panels.
+                    Third-party API integrations for verification, document validation, and compliance.</div>
+                  <div class="project-tags">
+                    <span class="project-tag">REST APIs</span><span class="project-tag">Laravel</span><span
+                      class="project-tag">MSSQL</span>
+                  </div>
+                </div>
+              </div>
+              <div class="project-card reveal" data-images="portfolio_images/Trading 01.png,portfolio_images/Trading 02.png,portfolio_images/Trading 03.png,portfolio_images/Trading 04.png,portfolio_images/Trading 05.png,portfolio_images/Trading 06.png,portfolio_images/Trading 07.png,portfolio_images/Trading 08.png">
+                <img src="portfolio_images/Trading 01.png" class="project-image" alt="Trading Platform">
+                <div class="project-content">
+                  <div class="project-title">📈 Real-Time Trading &amp; P&amp;L</div>
+                  <div class="project-desc">Low-latency apps for live market feed, trade tracking, and P&amp;L
+                    calculations using WebSocket and NSE/BSE data integration.</div>
+                  <div class="project-tags">
+                    <span class="project-tag">WebSocket</span><span class="project-tag">NSE/BSE</span><span
+                      class="project-tag">Node.js</span>
+                  </div>
+                </div>
+              </div>
+              <div class="project-card reveal" data-images="portfolio_images/CRM - 01.png,portfolio_images/CRM - 02.png">
+                <img src="portfolio_images/CRM - 01.png" class="project-image" alt="CRM System">
+                <div class="project-content">
+                  <div class="project-title">👥 CRM System</div>
+                  <div class="project-desc">Centralized CRM for managing client lifecycle, lead tracking, partner
+                    management, and business workflows with reporting features.</div>
+                  <div class="project-tags">
+                    <span class="project-tag">PHP</span><span class="project-tag">MySQL</span><span
+                      class="project-tag">jQuery</span>
+                  </div>
+                </div>
+              </div>
+              <div class="project-card reveal" data-images="portfolio_images/micro-services 01.png">
+                <img src="portfolio_images/micro-services 01.png" class="project-image" alt="Microservices">
+                <div class="project-content">
+                  <div class="project-title">⚙️ Node.js Microservices Engine</div>
+                  <div class="project-desc">High-performance architecture built with Node.js, utilizing Cluster and Fork modes for distributed task automation. Supports complex sync/async processing pipelines with integrated Load Balancing for industrial-scale operations.</div>
+                  <div class="project-tags">
+                    <span class="project-tag">Node.js</span><span class="project-tag">Cluster</span><span
+                      class="project-tag">Fork Mode</span><span class="project-tag">Load Balancing</span><span
+                      class="project-tag">Automation</span>
+                  </div>
+                </div>
+              </div>
+              <div class="project-card reveal" data-images="portfolio_images/api-gateway - 01.png">
+                <img src="portfolio_images/api-gateway - 01.png" class="project-image" alt="API Gateway">
+                <div class="project-content">
+                  <div class="project-title">🌐 API Gateway Platform</div>
+                  <div class="project-desc">Centralized API gateway managing all REST &amp; SOAP APIs, authentication,
+                    request routing, logging, rate limiting, and error handling.</div>
+                  <div class="project-tags">
+                    <span class="project-tag">REST</span><span class="project-tag">SOAP</span><span
+                      class="project-tag">Docker</span>
+                  </div>
+                </div>
+              </div>
+              <div class="project-card reveal" data-images="portfolio_images/Backoffice 01.png,portfolio_images/Arham Backoffice 01.png,portfolio_images/Arham Backoffice 02.png,portfolio_images/AP Branch Backoffice 01.png,portfolio_images/AP Branch Backoffice 02.png,portfolio_images/Arham Share Backoffice 01.png,portfolio_images/Trade Circle Backoffice 01.png">
+                <img src="portfolio_images/Backoffice 01.png" class="project-image" alt="Backoffice System">
+                <div class="project-content">
+                  <div class="project-title">🏦 Client Backoffice System</div>
+                  <div class="project-desc">Client portal for tracking trades, financial data, reports, and account
+                    activities with real-time and historical insights.</div>
+                  <div class="project-tags">
+                    <span class="project-tag">Laravel</span><span class="project-tag">WebSocket</span><span
+                      class="project-tag">MSSQL</span>
+                  </div>
+                </div>
+              </div>
+              <div class="project-card reveal">
+                <div class="project-content">
+                  <div class="project-title">🔔 Notification &amp; Alert Engine</div>
+                  <div class="project-desc">Multi-channel notification system supporting Email, SMS, and in-app alerts
+                    with event-based triggers for real-time communication.</div>
+                  <div class="project-tags">
+                    <span class="project-tag">Node.js</span><span class="project-tag">SMS API</span><span
+                      class="project-tag">Email</span>
+                  </div>
+                </div>
+              </div>
+              <div class="project-card reveal" data-images="portfolio_images/NBFC Project - 01.png,portfolio_images/NBFC Project - 02.png,portfolio_images/NBFC Project - 03.png,portfolio_images/NBFC Project - 04.png">
+                <img src="portfolio_images/NBFC Project - 01.png" class="project-image" alt="NBFC Project">
+                <div class="project-content">
+                  <div class="project-title">📋 NBFC Physical KYC Tracker</div>
+                  <div class="project-desc">Software to manage and track physical KYC processes, improving operational
+                    transparency and efficiency for NBFC compliance.</div>
+                  <div class="project-tags">
+                    <span class="project-tag">PHP</span><span class="project-tag">MySQL</span><span
+                      class="project-tag">Reports</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- New Projects -->
+              <div class="project-card reveal" data-images="portfolio_images/School Managment - 01.png,portfolio_images/School Managment - 02.png">
+                <img src="portfolio_images/School Managment - 01.png" class="project-image" alt="School Management">
+                <div class="project-content">
+                  <div class="project-title">🏫 School Management System</div>
+                  <div class="project-desc">Comprehensive school administration platform for managing students, faculty, exams, and attendance.</div>
+                  <div class="project-tags">
+                    <span class="project-tag">React</span><span class="project-tag">Next.js</span><span
+                      class="project-tag">Node.js</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="project-card reveal" data-images="portfolio_images/Whatsapp_Marketing_Software - 01.png">
+                <img src="portfolio_images/Whatsapp_Marketing_Software - 01.png" class="project-image" alt="WhatsApp Marketing">
+                <div class="project-content">
+                  <div class="project-title">💬 WhatsApp Marketing Solution</div>
+                  <div class="project-desc">Bulk messaging and automation tool for marketing campaigns via WhatsApp API.</div>
+                  <div class="project-tags">
+                    <span class="project-tag">Laravel</span><span class="project-tag">HTML</span><span
+                      class="project-tag">Python</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="project-card reveal" data-images="portfolio_images/Trade_Circle - 01.png">
+                <img src="portfolio_images/Trade_Circle - 01.png" class="project-image" alt="Trade Circle">
+                <div class="project-content">
+                  <div class="project-title">⭕ Trade Circle Platform</div>
+                  <div class="project-desc">Financial networking and trading community platform.</div>
+                  <div class="project-tags">
+                    <span class="project-tag">PHP</span><span class="project-tag">jQuery</span><span
+                      class="project-tag">MySQL</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="project-card reveal" data-images="portfolio_images/Midas_Media_Works - 01.png">
+                <img src="portfolio_images/Midas_Media_Works - 01.png" class="project-image" alt="Midas Media">
+                <div class="project-content">
+                  <div class="project-title">🎬 Midas Media Works</div>
+                  <div class="project-desc">Media management and portfolio site for a creative production house.</div>
+                  <div class="project-tags">
+                    <span class="project-tag">HTML/CSS</span><span class="project-tag">JavaScript</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="project-card reveal" data-images="portfolio_images/Blogging_Site - 01.png">
+                <img src="portfolio_images/Blogging_Site - 01.png" class="project-image" alt="Blogging Site">
+                <div class="project-content">
+                  <div class="project-title">📝 Blogging Platform</div>
+                  <div class="project-desc">Full-featured blogging site with rich text editing and CMS capabilities.</div>
+                  <div class="project-tags">
+                    <span class="project-tag">PHP</span><span class="project-tag">MySQL</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="project-card reveal" data-images="portfolio_images/Website - 01.png,portfolio_images/Website - 02.png,portfolio_images/Website - 03.png,portfolio_images/Website - 04.png">
+                <img src="portfolio_images/Website - 01.png" class="project-image" alt="Personal Website">
+                <div class="project-content">
+                  <div class="project-title">🌐 Personal Portfolio & Website</div>
+                  <div class="project-desc">A highly customized interactive developer portfolio.</div>
+                  <div class="project-tags">
+                    <span class="project-tag">Modern Web Tech</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="section-declaration mt-16"><span class="brk">]</span><span class="punc">;</span></div>
+          </div>
+        </div>
+
+        <!-- ===== EDUCATION ===== -->
+        <div class="editor-content" id="content-education">
+          <div class="section-wrapper">
+            <div class="section-comment">// education.yml — Academic Background</div>
+            <div class="section-declaration"><span class="prop">education</span><span class="punc">:</span></div>
+
+            <div class="code-block" style="padding:12px 0 24px;">
+              <div class="line-numbers">
+                <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span>
+              </div>
+              <div class="code-lines">
+                <span class="line"> <span class="prop">degree</span><span class="punc">:</span> <span
+                    class="str">"Bachelor of Computer Applications (BCA)"</span></span>
+                <span class="line"> <span class="prop">institution</span><span class="punc">:</span> <span
+                    class="str">"S.V. Patel College, Surat, Gujarat"</span></span>
+                <span class="line"> <span class="prop">completed</span><span class="punc">:</span> <span
+                    class="str">"April 2020"</span></span>
+                <span class="line"> <span class="prop">status</span><span class="punc">:</span> <span
+                    class="num">true</span> <span class="cmt"># Successfully completed</span></span>
+                <span class="line"> <span class="prop">languages</span><span class="punc">:</span> <span
+                    class="brk">[</span><span class="str">"Gujarati"</span><span class="punc">,</span> <span
+                    class="str">"Hindi"</span><span class="punc">,</span> <span class="str">"English"</span><span
+                    class="brk">]</span></span>
+                <span class="line"> <span class="prop">location</span><span class="punc">:</span> <span
+                    class="str">"Adajan, Surat, Gujarat, India"</span></span>
+              </div>
+            </div>
+
+            <div class="edu-card reveal">
+              <div class="edu-icon">🎓</div>
+              <div>
+                <div class="edu-degree">Bachelor of Computer Applications (BCA)</div>
+                <div class="edu-school">S.V. Patel College, Surat, Gujarat</div>
+                <div class="edu-year">Completed: April 2020</div>
+              </div>
+            </div>
+
+            <div class="section-divider">
+              <div class="section-comment" style="margin-bottom:16px;">// languages spoken</div>
+              <div class="flex-wrap">
+                <div class="project-card reveal lang-card">
+                  <div style="font-size:28px;margin-bottom:6px;">🇮🇳</div>
+                  <div class="project-title" style="font-size:12px;">Gujarati</div>
+                  <div class="project-desc" style="font-size:11px;">Native</div>
+                </div>
+                <div class="project-card reveal lang-card">
+                  <div style="font-size:28px;margin-bottom:6px;">🗣️</div>
+                  <div class="project-title" style="font-size:12px;">Hindi</div>
+                  <div class="project-desc" style="font-size:11px;">Fluent</div>
+                </div>
+                <div class="project-card reveal lang-card">
+                  <div style="font-size:28px;margin-bottom:6px;">🌐</div>
+                  <div class="project-title" style="font-size:12px;">English</div>
+                  <div class="project-desc" style="font-size:11px;">Professional</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===== CONTACT ===== -->
+        <div class="editor-content" id="content-contact">
+          <div class="section-wrapper">
+            <div class="section-comment">// contact.json — Get In Touch</div>
+            <div class="section-declaration"><span class="brk">{</span></div>
+
+            <div class="code-block" style="padding:12px 0 24px;">
+              <div class="line-numbers">
+                <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span>
+              </div>
+              <div class="code-lines">
+                <span class="line"> <span class="prop">"phone"</span><span class="punc">:</span> <span class="str">"+91 8758118665"</span><span class="punc">,</span></span>
+                <span class="line"> <span class="prop">"email"</span><span class="punc">:</span> <span class="str">"hirusapariya@gmail.com"</span><span class="punc">,</span></span>
+                <span class="line"> <span class="prop">"location"</span><span class="punc">:</span> <span class="str">"Adajan, Surat, Gujarat, India"</span><span class="punc">,</span></span>
+                <span class="line"> <span class="prop">"linkedin"</span><span class="punc">:</span> <span class="str">"linkedin.com/in/hiren-sapariya-16b41616a"</span><span class="punc">,</span></span>
+                <span class="line"> <span class="prop">"available"</span><span class="punc">:</span> <span class="kw">true</span></span>
+              </div>
+            </div>
+
+            <div class="contact-grid reveal">
+              <a class="contact-item" href="tel:+918758118665">
+                <div class="contact-icon">📞</div>
+                <div>
+                  <div class="contact-label">Phone</div>
+                  <div class="contact-value">+91 8758118665</div>
+                </div>
+              </a>
+              <a class="contact-item" href="mailto:hirusapariya@gmail.com">
+                <div class="contact-icon">✉️</div>
+                <div>
+                  <div class="contact-label">Email</div>
+                  <div class="contact-value">hirusapariya@gmail.com</div>
+                </div>
+              </a>
+              <a class="contact-item" href="https://www.linkedin.com/in/hiren-sapariya-16b41616a/" target="_blank"
+                rel="noopener">
+                <div class="contact-icon">🔗</div>
+                <div>
+                  <div class="contact-label">LinkedIn</div>
+                  <div class="contact-value">hiren-sapariya-16b41616a</div>
+                </div>
+              </a>
+              <div class="contact-item" style="cursor:default;">
+                <div class="contact-icon">📍</div>
+                <div>
+                  <div class="contact-label">Location</div>
+                  <div class="contact-value">Adajan, Surat, Gujarat</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="section-declaration mt-16"><span class="brk">}</span></div>
+          </div>
+        </div>
+
+      </div><!-- /editor-area -->
+    </div><!-- /ide-body -->
+
+    <!-- STATUS BAR -->
+    <div class="status-bar">
+      <div class="status-item">🔀 main</div>
+      <div class="status-item">⚡ Full Stack Developer</div>
+      <div class="status-item">✅ 0 errors, 0 warnings</div>
+      <div class="status-item">🌐 UTF-8</div>
+      <div class="status-item">📄 JavaScript</div>
+      <div class="status-item">Ln 1, Col 1</div>
+    </div>
+
+  </div><!-- /ide-shell -->
+
+  <script>
+    /* =============================================
+       THEME TOGGLE
+       ============================================= */
+    const html = document.documentElement;
+    const themeToggle = document.getElementById('themeToggle');
+    const themeLabel = document.getElementById('themeLabel');
+
+    themeToggle.addEventListener('click', () => {
+      const isDark = html.getAttribute('data-theme') === 'dark';
+      html.setAttribute('data-theme', isDark ? 'light' : 'dark');
+      themeLabel.textContent = isDark ? '☀️' : '🌙';
+    });
+
+    /* =============================================
+       TAB / SIDEBAR NAVIGATION
+       ============================================= */
+    function activateTab(target) {
+      // Update tabs
+      document.querySelectorAll('.tab').forEach(t => {
+        t.classList.toggle('active', t.dataset.target === target);
+      });
+      // Update sidebar items
+      document.querySelectorAll('.sidebar-item[data-target]').forEach(s => {
+        s.classList.toggle('active', s.dataset.target === target);
+      });
+      // Update content panels
+      document.querySelectorAll('.editor-content').forEach(c => {
+        c.classList.toggle('active', c.id === 'content-' + target);
+      });
+      // Trigger skill bars if on skills tab
+      if (target === 'skills') {
+        setTimeout(animateSkillBars, 100);
+      }
+      // Trigger reveals
+      setTimeout(checkReveals, 50);
+    }
+
+    document.querySelectorAll('.tab, .sidebar-item[data-target]').forEach(el => {
+      el.addEventListener('click', () => activateTab(el.dataset.target));
+    });
+
+    /* =============================================
+       TYPING ANIMATION — HERO
+       ============================================= */
+    const nameEl = document.getElementById('typingName');
+    const titleEl = document.getElementById('typingTitle');
+    const cursorEl = document.getElementById('typingCursor');
+    const heroMeta = document.getElementById('heroMeta');
+
+    const fullName = 'Hiren Sapariya';
+    const fullTitle = '// Full Stack Developer & Department Head';
+
+    function typeText(element, text, speed, callback) {
+      let i = 0;
+      element.textContent = '';
+      const timer = setInterval(() => {
+        element.textContent += text[i];
+        i++;
+        if (i >= text.length) {
+          clearInterval(timer);
+          if (callback) callback();
+        }
+      }, speed);
+    }
+
+    // Start sequence on load
+    window.addEventListener('load', () => {
+      cursorEl.style.display = 'inline-block';
+      typeText(nameEl, fullName, 80, () => {
+        // After name, type title
+        setTimeout(() => {
+          titleEl.style.opacity = '1';
+          typeText(titleEl, fullTitle, 45, () => {
+            // Show meta badges
+            setTimeout(() => {
+              heroMeta.style.opacity = '1';
+              // Build hero code block
+              buildHeroCodeBlock();
+            }, 400);
+          });
+        }, 300);
+      });
+    });
+
+    /* =============================================
+       HERO CODE BLOCK (animated line reveal)
+       ============================================= */
+    function buildHeroCodeBlock() {
+      const lines = [
+        { html: `<span class="cmt">// Initializing developer profile...</span>` },
+        { html: `` },
+        { html: `<span class="kw">const</span> <span class="prop">developer</span> <span class="op">=</span> <span class="kw">new</span> <span class="cls">FullStackDev</span><span class="brk">({</span>` },
+        { html: `  <span class="prop">name</span><span class="punc">:</span>        <span class="str">"Hiren Sapariya"</span><span class="punc">,</span>` },
+        { html: `  <span class="prop">location</span><span class="punc">:</span>    <span class="str">"Adajan, Surat, Gujarat"</span><span class="punc">,</span>` },
+        { html: `  <span class="prop">experience</span><span class="punc">:</span>  <span class="num">5</span><span class="punc">,</span> <span class="cmt">// years</span>` },
+        { html: `  <span class="prop">teamSize</span><span class="punc">:</span>    <span class="num">5</span><span class="punc">,</span> <span class="cmt">// developers led</span>` },
+        { html: `  <span class="prop">aiDriven</span><span class="punc">:</span>    <span class="kw">true</span><span class="punc">,</span>` },
+        { html: `  <span class="prop">stack</span><span class="punc">:</span>       <span class="brk">[</span><span class="str">"PHP"</span><span class="punc">,</span> <span class="str">"Laravel"</span><span class="punc">,</span> <span class="str">"React"</span><span class="punc">,</span> <span class="str">"Node"</span><span class="punc">,</span> <span class="str">"Python"</span><span class="brk">]</span><span class="punc">,</span>` },
+        { html: `  <span class="prop">databases</span><span class="punc">:</span>   <span class="brk">[</span><span class="str">"MySQL"</span><span class="punc">,</span> <span class="str">"MSSQL"</span><span class="punc">,</span> <span class="str">"MongoDB"</span><span class="brk">]</span><span class="punc">,</span>` },
+        { html: `  <span class="prop">domains</span><span class="punc">:</span>     <span class="brk">[</span><span class="str">"Fintech"</span><span class="punc">,</span> <span class="str">"ERP"</span><span class="punc">,</span> <span class="str">"eKYC"</span><span class="punc">,</span> <span class="str">"Trading"</span><span class="brk">]</span>` },
+        { html: `<span class="brk">})</span><span class="punc">;</span>` },
+        { html: `` },
+        { html: `<span class="cmt">// Ready to build something amazing? 🚀</span>` },
+        { html: `<span class="fn">developer</span><span class="op">.</span><span class="fn">connect</span><span class="brk">()</span><span class="punc">;</span>` },
+      ];
+
+      const lineNumsEl = document.getElementById('heroLineNums');
+      const linesEl = document.getElementById('heroLines');
+
+      lines.forEach((line, i) => {
+        const numSpan = document.createElement('span');
+        numSpan.textContent = i + 1;
+        numSpan.style.opacity = '0';
+        lineNumsEl.appendChild(numSpan);
+
+        const lineSpan = document.createElement('span');
+        lineSpan.className = 'line';
+        lineSpan.innerHTML = line.html || '&nbsp;';
+        lineSpan.style.opacity = '0';
+        lineSpan.style.transform = 'translateX(-8px)';
+        lineSpan.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+        linesEl.appendChild(lineSpan);
+
+        // Staggered reveal
+        setTimeout(() => {
+          numSpan.style.opacity = '1';
+          lineSpan.style.opacity = '1';
+          lineSpan.style.transform = 'translateX(0)';
+        }, 100 + i * 60);
+      });
+    }
+
+    /* =============================================
+       SKILL BAR ANIMATION
+       ============================================= */
+    function animateSkillBars() {
+      document.querySelectorAll('.skill-bar-fill').forEach(bar => {
+        const width = bar.getAttribute('data-width');
+        bar.style.width = width + '%';
+      });
+    }
+
+    /* =============================================
+       SCROLL REVEAL
+       ============================================= */
+    function checkReveals() {
+      document.querySelectorAll('.reveal').forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 40) {
+          el.classList.add('visible');
+        }
+      });
+    }
+
+    document.getElementById('editorArea').addEventListener('scroll', checkReveals);
+    checkReveals();
+
+    // Also trigger after tab switch
+    setTimeout(checkReveals, 200);
+  </script>
+  <!-- PROJECT MODAL -->
+  <div class="modal-overlay" id="projectModal">
+    <div class="modal-container">
+      <div class="modal-header">
+        <div class="modal-title" id="modalTitle">Project Preview</div>
+        <div class="modal-close" id="modalClose">&times;</div>
+      </div>
+      <div class="slider-container">
+        <div class="slider-wrapper" id="sliderWrapper"></div>
+        <div class="slider-nav slider-prev" id="sliderPrev">❮</div>
+        <div class="slider-nav slider-next" id="sliderNext">❯</div>
+      </div>
+      <div class="slider-dots" id="sliderDots"></div>
+    </div>
+  </div>
+
+  <script>
+    const modal = document.getElementById('projectModal');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalClose = document.getElementById('modalClose');
+    const sliderWrapper = document.getElementById('sliderWrapper');
+    const sliderDots = document.getElementById('sliderDots');
+    const sliderPrev = document.getElementById('sliderPrev');
+    const sliderNext = document.getElementById('sliderNext');
+
+    let currentSlide = 0;
+    let totalSlides = 0;
+
+    function openModal(title, imagesStr) {
+      const images = imagesStr.split(',').map(s => s.trim()).filter(s => s.length > 0);
+      if (images.length === 0) return;
+      totalSlides = images.length;
+      currentSlide = 0;
+      modalTitle.textContent = title;
+      sliderWrapper.innerHTML = '';
+      sliderDots.innerHTML = '';
+      images.forEach((src, idx) => {
+        const slide = document.createElement('div');
+        slide.className = 'slide';
+        slide.innerHTML = `<img src="${src}" alt="Slide ${idx + 1}" onerror="this.src='https://via.placeholder.com/800x450?text=Image+Not+Found'">`;
+        sliderWrapper.appendChild(slide);
+        const dot = document.createElement('div');
+        dot.className = `dot-indicator ${idx === 0 ? 'active' : ''}`;
+        dot.onclick = (e) => { e.stopPropagation(); goToSlide(idx); };
+        sliderDots.appendChild(dot);
+      });
+      updateSlider();
+      modal.style.display = 'flex';
+      setTimeout(() => modal.classList.add('active'), 10);
+      sliderPrev.style.display = totalSlides > 1 ? 'flex' : 'none';
+      sliderNext.style.display = totalSlides > 1 ? 'flex' : 'none';
+      sliderDots.style.display = totalSlides > 1 ? 'flex' : 'none';
+    }
+
+    function closeModal() {
+      modal.classList.remove('active');
+      setTimeout(() => modal.style.display = 'none', 300);
+    }
+
+    function updateSlider() {
+      sliderWrapper.style.transform = `translateX(-${currentSlide * 100}%)`;
+      const dots = sliderDots.querySelectorAll('.dot-indicator');
+      dots.forEach((dot, idx) => { dot.classList.toggle('active', idx === currentSlide); });
+    }
+
+    function goToSlide(idx) { currentSlide = idx; updateSlider(); }
+    function nextSlide() { if (totalSlides > 0) { currentSlide = (currentSlide + 1) % totalSlides; updateSlider(); } }
+    function prevSlide() { if (totalSlides > 0) { currentSlide = (currentSlide - 1 + totalSlides) % totalSlides; updateSlider(); } }
+
+    document.addEventListener('click', (e) => {
+      const card = e.target.closest('.project-card');
+      if (card && card.hasAttribute('data-images')) {
+        openModal(card.querySelector('.project-title').textContent, card.getAttribute('data-images'));
+      }
+    });
+
+    modalClose.onclick = (e) => { e.stopPropagation(); closeModal(); };
+    modal.onclick = (e) => { if (e.target === modal) closeModal(); };
+    sliderNext.onclick = (e) => { e.stopPropagation(); nextSlide(); };
+    sliderPrev.onclick = (e) => { e.stopPropagation(); prevSlide(); };
+
+    document.addEventListener('keydown', (e) => {
+      if (!modal.classList.contains('active')) return;
+      if (e.key === 'ArrowRight') nextSlide();
+      if (e.key === 'ArrowLeft') prevSlide();
+      if (e.key === 'Escape') closeModal();
+    });
+  </script>
+</body>
+
+</html>
